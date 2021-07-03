@@ -7,8 +7,9 @@
     {% csrf_token %}
     <p> 상품명 : <input type="text" name="title"></p>
     <p> 작성자 : <input type="text" name="writer"></p>
-    <p> 수량 : <input type="number" name="quantity"></p>
-    <p> 가격 : <input type="number" name="price"></p>
+    <p> 수량 : <input type="number" name="quantity" min="1"></p>
+    <p> 가격 : <input type="number" name="price" min="0"></p>
+    <p> 목표 인원 : <input type="number" name="people" min="1"></p>
     <button type="submit">제출</button>
 </form>
 

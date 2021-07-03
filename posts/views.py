@@ -20,8 +20,13 @@ def create(request):
     makepost_post.writer=request.user
     makepost_post.quantity=request.POST['quantity']
     makepost_post.price=request.POST['price']
+    makepost_post.people=request.POST['people']
     makepost_post.save()
-    return redirect('detail',makepost_post.id)
+    return redirect('posts:detail',makepost_post.id)
+
+def edit(request, id):
+    edit_post = Post.objects.get(id=id)
+    return render(request, 'posts/edit.html',{'post':edit_post})
 
     
 

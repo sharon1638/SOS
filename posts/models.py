@@ -9,6 +9,7 @@ class Post(models.Model):
     writer=models.ForeignKey(User,on_delete=models.CASCADE)
     quantity=models.IntegerField()
     price=models.IntegerField()
+    people=models.IntegerField(null=False)
 
     def __str__(self):
         return self.title

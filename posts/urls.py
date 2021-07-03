@@ -9,4 +9,5 @@ urlpatterns = [
     path("makepost/",makepost,name="makepost"),
     path("<str:id>",detail,name="detail"),
     path("create/",create, name="create"),
+    path('edit/<str:id>', edit, name="edit"),
 ]

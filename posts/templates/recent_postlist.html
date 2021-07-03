@@ -13,6 +13,7 @@
         {{post.quantity}}
         {{post.price}}
         {{post.summary}}
+        {{post.people}}
         <td><a href="{% url 'posts:detail' post.id %}">{{post.title}}</a></td>
     </tr>
         {% endfor %}

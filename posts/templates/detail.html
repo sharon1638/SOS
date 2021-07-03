@@ -2,12 +2,13 @@
 {% load static %}
 {% block content %}
 
-    {% for post in posts%}
-    <h1>{{post.title}}</h1>
-    작성자: {{post.writer}} <br>
-    수량 : {{post.quantity}} <br>
-    가격 : {{post.price}} 
-    {%endfor%}
-
-
+<h1> </h1>
+<div>
+상품명 : {{post.title}} <br>
+작성자 : {{post.writer}} <br>
+수량 : {{post.quantity}} <br>
+가격 : {{post.price}} <br>
+목표 인원 : {{post.people}} 
+</div>
+<a href="{%url 'posts:edit' post.id%}">
 {% endblock %}
