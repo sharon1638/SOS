@@ -1,0 +1,11 @@
+.mypage_body{
+    display:flex;
+}
+.left_side{
+    width: 35%;
+    padding: 20px;
+}
+.right_side{
+    width: 65%;
+    padding: 20px;
+}

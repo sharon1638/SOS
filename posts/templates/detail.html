@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    {% for post in posts%}
+    <h1>{{post.title}}</h1>
+    작성자: {{post.writer}} <br>
+    수량 : {{post.quantity}} <br>
+    가격 : {{post.price}} 
+    {%endfor%}
+
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<header>
+    <h2> 최근게시물 </h2>
+</header>
+
+ <tbody>
+        {% for post in posts %}
+        {{post.title}}
+        {{post.writer}}
+        {{post.quantity}}
+        {{post.price}}
+        {{post.summary}}
+        <td><a href="{% url 'posts:detail' post.id %}">{{post.title}}</a></td>
+    </tr>
+        {% endfor %}
+</tbody>
+
+{% endblock %}

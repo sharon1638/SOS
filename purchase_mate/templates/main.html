@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="body">
+    <div class="category_cover">
+        <!-- category -->
+        <div class="category" id="category">
+            <div>
+                <img class="category_img" src="../static/images/vegetable.png" alt="vegetables">
+                <p style="background-color: #aad4b3;">
+                    <img style="width:40%;" src="../static/images/vegetable_icon.svg" alt=""><br>
+                    <br>
+                    식자재 <br>
+                    - - - - - - - - - - <br>
+                    <a class="green" href="">more</a>
+                </p>
+            </div>
+            <div>
+                <p style="background-color: #86cdd7;">
+                    <img style="width:40%;" src="../static/images/plates_icon.svg" alt=""><br>
+                    <br>
+                    생필품 <br>
+                    - - - - - - - - - - <br>
+                    <a class="blue" href="">more</a>
+                </p>
+                <img class="category_img" src="../static/images/plates.png" alt="plates">
+            </div>
+            <div>
+                <img class="category_img" src="../static/images/netflix.png" alt="netflix">
+                <p style="background-color: #8ddfd5;">
+                    <img style="width:40%;" src="../static/images/netflix_icon.svg" alt=""><br>
+                    <br>
+                    OTT 서비스 <br>
+                    - - - - - - - - - - <br>
+                    <a class="lightseagreen" href="">more</a>
+                </p>
+            </div>
+            <div>
+                <p style="background-color: #f3d6bf;">
+                    <img style="width:40%;" src="../static/images/etc_icon.svg" alt=""><br>
+                    <br>
+                    기타 <br>
+                    - - - - - - - - - - <br>
+                    <a class="orange" href="">more</a>
+                </p>
+                <img class="category_img" src="../static/images/etc.png" alt="etc">
+            </div>
+        </div>
+
+    </div>
+    <!-- recent -->
+    <div class="recent_cover">
+
+        <div class="recent" id="recent">
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            
+        </div>
+    </div>
+    <p class="more"><a href="{% url 'posts:recent_postlist'%}">더보기</a></p>
+
+    <!-- subscribe -->
+    {%if user.is_authenticated%}
+    <div class="subscribe_cover">
+        <div class="subscribe" id="subscribe">
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            <div>
+                <p style="text-align:center;"><img style="width:60%;" src="../static/images/no_image.svg" alt=""></p>
+            </div>
+            
+        </div>
+            
+    </div>
+    <p class="more"><a href="">더보기</a></p>
+    {% endif %}
+
+</div>
+
+
+{% endblock %}
